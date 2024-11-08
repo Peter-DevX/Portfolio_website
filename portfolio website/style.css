@@ -5,6 +5,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background: #080808;
@@ -28,6 +31,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 
 .big-p{
     font-size: 3.2rem;
@@ -312,6 +316,7 @@ tab-content ul li {
 }
 
 /* ------------------------------- CONTACT ---------------  */
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -375,7 +380,6 @@ textarea{
 form btn2{
     padding: 14px 60px;
     font-size: 18px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -413,7 +417,7 @@ nav .fas{
     .header-image img{
         width: 297px;
         height: 400px;
-        border-radius: 25px;
+        border-radius: 20px;
         margin: 0;
         
     }
@@ -436,15 +440,59 @@ nav .fas{
         background: rgb(71, 71, 138);
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
+        z-index: 99;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+         display: block;
+         margin:25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
 
     }
 
-    #about{
-        margin-top: 150px;
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size:16px;
+        margin-right: 20px;
     }
     
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
